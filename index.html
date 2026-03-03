@@ -1,13 +1,180 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prueba Github Pages</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mi Repositorio | GitHub Pages</title>
+  <meta name="description" content="Página de ejemplo para un repositorio propio en GitHub Pages." />
+  <style>
+    :root {
+      --bg: #0b0f14;
+      --panel: #131a22;
+      --text: #e6edf3;
+      --muted: #9aa4b2;
+      --accent: #4db8ff;
+      --accent-2: #7cffc4;
+      --border: #263040;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Arial, sans-serif;
+      background: radial-gradient(1000px 500px at 20% -10%, #1a2a3a, transparent),
+        radial-gradient(800px 400px at 110% 0%, #1f3a4a, transparent),
+        var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    header {
+      padding: 56px 24px 32px;
+      max-width: 980px;
+      margin: 0 auto;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 6px 10px;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      font-size: 12px;
+      letter-spacing: 0.3px;
+      color: var(--muted);
+      background: rgba(19, 26, 34, 0.7);
+    }
+
+    h1 {
+      margin: 16px 0 8px;
+      font-size: 40px;
+      letter-spacing: -0.5px;
+    }
+
+    p.lead {
+      margin: 0;
+      font-size: 18px;
+      color: var(--muted);
+    }
+
+    main {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 0 24px 64px;
+      display: grid;
+      gap: 20px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+    }
+
+    .card {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 16px;
+    }
+
+    .card h3 {
+      margin: 0 0 8px;
+      font-size: 16px;
+    }
+
+    .card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .cta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      align-items: center;
+      margin-top: 12px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 10px 16px;
+      border-radius: 8px;
+      font-weight: 600;
+      text-decoration: none;
+      color: #0b0f14;
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+    }
+
+    .link {
+      color: var(--accent);
+      text-decoration: none;
+      border-bottom: 1px dashed transparent;
+    }
+
+    .link:hover {
+      border-bottom-color: var(--accent);
+    }
+
+    footer {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 0 24px 40px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+  </style>
 </head>
 <body>
+  <header>
+    <span class="badge">GitHub Pages · Demo</span>
+    <h1>Mi Repositorio Personal</h1>
+    <p class="lead">
+      Una página de ejemplo para presentar tu proyecto, documentación rápida y enlaces clave.
+    </p>
+    <div class="cta">
+      <a class="button" href="#">Ver repositorio</a>
+      <a class="link" href="#">Documentación</a>
+    </div>
+  </header>
 
-    <p>Saludos</p>
-    
+  <main>
+    <section class="grid">
+      <article class="card">
+        <h3>Objetivo</h3>
+        <p>Centralizar el código fuente, issues y avances del proyecto en un solo lugar.</p>
+      </article>
+      <article class="card">
+        <h3>Tecnologías</h3>
+        <p>HTML · CSS · JavaScript · Git · GitHub Actions (opcional).</p>
+      </article>
+      <article class="card">
+        <h3>Estado</h3>
+        <p>En desarrollo: roadmap, tareas abiertas y primeras versiones.</p>
+      </article>
+      <article class="card">
+        <h3>Cómo contribuir</h3>
+        <p>Abre un issue o crea un pull request con mejoras claras y bien documentadas.</p>
+      </article>
+    </section>
+
+    <section class="card">
+      <h3>Instalación rápida</h3>
+      <p>
+        Clona el repo, instala dependencias si aplica y ejecuta el proyecto localmente.
+        Puedes enlazar a un README más extenso con pasos detallados.
+      </p>
+      <pre><code>git clone https://github.com/tu-usuario/tu-repo.git
+cd tu-repo
+# instrucciones del proyecto aquí</code></pre>
+    </section>
+  </main>
+
+  <footer>
+    Hecho para practicar GitHub Pages · Actualiza el contenido con tu información real.
+  </footer>
 </body>
 </html>
