@@ -3,178 +3,224 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mi Repositorio | GitHub Pages</title>
-  <meta name="description" content="Página de ejemplo para un repositorio propio en GitHub Pages." />
+  <title>Mi Proyecto</title>
+
   <style>
     :root {
-      --bg: #0b0f14;
-      --panel: #131a22;
+      --bg: #0a0f1a;
+      --bg-soft: #0f1626;
       --text: #e6edf3;
-      --muted: #9aa4b2;
+      --muted: #8b97a7;
       --accent: #4db8ff;
       --accent-2: #7cffc4;
-      --border: #263040;
     }
 
-    * {
-      box-sizing: border-box;
-    }
+    * { box-sizing: border-box; }
 
     body {
       margin: 0;
-      font-family: "Segoe UI", Arial, sans-serif;
-      background: radial-gradient(1000px 500px at 20% -10%, #1a2a3a, transparent),
-        radial-gradient(800px 400px at 110% 0%, #1f3a4a, transparent),
-        var(--bg);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: radial-gradient(1200px 600px at 50% -10%, #1a2a3a, transparent),
+                  linear-gradient(180deg, #0a0f1a 0%, #0d1420 100%);
       color: var(--text);
-      line-height: 1.6;
+      line-height: 1.7;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      padding: 0 24px;
     }
 
     header {
-      padding: 56px 24px 32px;
-      max-width: 980px;
-      margin: 0 auto;
-    }
-
-    .badge {
-      display: inline-block;
-      padding: 6px 10px;
-      border: 1px solid var(--border);
-      border-radius: 999px;
-      font-size: 12px;
-      letter-spacing: 0.3px;
-      color: var(--muted);
-      background: rgba(19, 26, 34, 0.7);
+      padding: 100px 0 60px;
+      text-align: center;
     }
 
     h1 {
-      margin: 16px 0 8px;
-      font-size: 40px;
-      letter-spacing: -0.5px;
-    }
-
-    p.lead {
+      font-size: 56px;
       margin: 0;
-      font-size: 18px;
+      letter-spacing: -1px;
+      background: linear-gradient(135deg, #ffffff, #7cffc4);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .lead {
+      margin-top: 20px;
+      font-size: 20px;
       color: var(--muted);
-    }
-
-    main {
-      max-width: 980px;
-      margin: 0 auto;
-      padding: 0 24px 64px;
-      display: grid;
-      gap: 20px;
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 16px;
-    }
-
-    .card {
-      background: var(--panel);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 16px;
-    }
-
-    .card h3 {
-      margin: 0 0 8px;
-      font-size: 16px;
-    }
-
-    .card p {
-      margin: 0;
-      color: var(--muted);
-      font-size: 14px;
+      max-width: 650px;
+      margin-left: auto;
+      margin-right: auto;
     }
 
     .cta {
+      margin-top: 30px;
       display: flex;
+      justify-content: center;
+      gap: 16px;
       flex-wrap: wrap;
-      gap: 12px;
-      align-items: center;
-      margin-top: 12px;
     }
 
     .button {
-      display: inline-block;
-      padding: 10px 16px;
+      padding: 12px 20px;
       border-radius: 8px;
-      font-weight: 600;
+      font-weight: 500;
       text-decoration: none;
-      color: #0b0f14;
+      color: #000;
       background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      transition: transform 0.2s ease;
     }
 
-    .link {
-      color: var(--accent);
-      text-decoration: none;
-      border-bottom: 1px dashed transparent;
+    .button.secondary {
+      background: transparent;
+      color: var(--text);
+      border: 1px solid #1c2430;
     }
 
-    .link:hover {
-      border-bottom-color: var(--accent);
+    .button:hover {
+      transform: translateY(-2px);
+    }
+
+    section {
+      padding: 60px 0;
+      border-top: 1px solid #141c2a;
+    }
+
+    h2 {
+      font-size: 26px;
+      margin-bottom: 16px;
+    }
+
+    p {
+      color: var(--muted);
+      font-size: 16px;
+      max-width: 700px;
+    }
+
+    .columns {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 30px;
+      margin-top: 20px;
+    }
+
+    ul {
+      padding-left: 18px;
+      color: var(--muted);
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    pre {
+      background: var(--bg-soft);
+      padding: 16px;
+      border-radius: 8px;
+      overflow-x: auto;
+      font-size: 14px;
+      border: 1px solid #1c2430;
     }
 
     footer {
-      max-width: 980px;
-      margin: 0 auto;
-      padding: 0 24px 40px;
+      text-align: center;
+      padding: 50px 20px;
       color: var(--muted);
-      font-size: 13px;
+      font-size: 14px;
+      border-top: 1px solid #141c2a;
     }
   </style>
 </head>
+
 <body>
+
+<div class="container">
+
   <header>
-    <span class="badge">GitHub Pages · Demo</span>
-    <h1>Mi Repositorio Personal</h1>
+    <h1>Mi Proyecto</h1>
     <p class="lead">
-      Una página de ejemplo para presentar tu proyecto, documentación rápida y enlaces clave.
+      Página profesional para presentar un proyecto, su documentación y estado actual.
+      Diseñada para ser clara, rápida y fácilmente escalable.
     </p>
+
     <div class="cta">
-      <a class="button" href="#">Ver repositorio</a>
-      <a class="link" href="#">Documentación</a>
+      <a class="button" href="#">Repositorio</a>
+      <a class="button secondary" href="#">Documentación</a>
     </div>
   </header>
 
-  <main>
-    <section class="grid">
-      <article class="card">
-        <h3>Objetivo</h3>
-        <p>Centralizar el código fuente, issues y avances del proyecto en un solo lugar.</p>
-      </article>
-      <article class="card">
-        <h3>Tecnologías</h3>
-        <p>HTML · CSS · JavaScript · Git · GitHub Actions (opcional).</p>
-      </article>
-      <article class="card">
-        <h3>Estado</h3>
-        <p>En desarrollo: roadmap, tareas abiertas y primeras versiones.</p>
-      </article>
-      <article class="card">
-        <h3>Cómo contribuir</h3>
-        <p>Abre un issue o crea un pull request con mejoras claras y bien documentadas.</p>
-      </article>
-    </section>
+  <section>
+    <h2>Descripción</h2>
+    <p>
+      Este proyecto es una base para desplegar sitios estáticos utilizando GitHub Pages.
+      Permite presentar información técnica, avances y recursos sin necesidad de backend.
+    </p>
+  </section>
 
-    <section class="card">
-      <h3>Instalación rápida</h3>
-      <p>
-        Clona el repo, instala dependencias si aplica y ejecuta el proyecto localmente.
-        Puedes enlazar a un README más extenso con pasos detallados.
-      </p>
-      <pre><code>git clone https://github.com/tu-usuario/tu-repo.git
-cd tu-repo
-# instrucciones del proyecto aquí</code></pre>
-    </section>
-  </main>
+  <section>
+    <h2>Características</h2>
+    <div class="columns">
+      <ul>
+        <li>Diseño minimalista profesional</li>
+        <li>Responsive en todos los dispositivos</li>
+        <li>Optimizado para rendimiento</li>
+      </ul>
+      <ul>
+        <li>Despliegue automático</li>
+        <li>Fácil mantenimiento</li>
+        <li>Sin dependencias externas</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2>Tecnologías</h2>
+    <div class="columns">
+      <ul>
+        <li>HTML5</li>
+        <li>CSS3</li>
+      </ul>
+      <ul>
+        <li>JavaScript</li>
+        <li>GitHub Pages</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2>Roadmap</h2>
+    <ul>
+      <li>✔ Versión inicial</li>
+      <li>✔ Estructura base</li>
+      <li>⬜ Integración con APIs</li>
+      <li>⬜ Animaciones avanzadas</li>
+      <li>⬜ Modo oscuro dinámico</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Ejemplo de uso</h2>
+    <pre><code>git clone https://github.com/usuario/repositorio.git
+cd repositorio
+# abrir index.html en el navegador</code></pre>
+  </section>
+
+  <section>
+    <h2>Contacto</h2>
+    <p>
+      GitHub: https://github.com/usuario  
+      <br />
+      Email: contacto@ejemplo.com
+    </p>
+  </section>
 
   <footer>
-    Hecho para practicar GitHub Pages · Actualiza el contenido con tu información real.
+    © 2026 · Proyecto desplegado con GitHub Pages
   </footer>
+
+</div>
+
 </body>
 </html>
